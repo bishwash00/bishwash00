@@ -1,5 +1,5 @@
 ## Hi there 👋
-
+I'm Bishwash Karki currently studying CS and learning new skills.
 <!--
 **bishwash00/bishwash00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
