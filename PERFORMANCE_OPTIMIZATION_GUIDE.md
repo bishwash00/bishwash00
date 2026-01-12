@@ -128,16 +128,15 @@ function updateItems() {
 
 **✅ Optimized Code:**
 ```javascript
-// Cache DOM queries and batch updates
+// Cache DOM queries and batch updates using CSS
 function updateItems() {
-    const fragment = document.createDocumentFragment();
     for (let i = 0; i < 100; i++) {
         const item = document.getElementById('item-' + i);
         item.style.cssText = 'color: red; font-size: 14px;';
     }
 }
 
-// Or use CSS classes
+// Or use CSS classes (best approach)
 function updateItems() {
     for (let i = 0; i < 100; i++) {
         const item = document.getElementById('item-' + i);
@@ -196,7 +195,9 @@ def fibonacci(n):
 
 **✅ Optimized with Memoization - O(n):**
 ```python
-def fibonacci(n, memo={}):
+def fibonacci(n, memo=None):
+    if memo is None:
+        memo = {}
     if n in memo:
         return memo[n]
     if n <= 1:
@@ -222,12 +223,16 @@ def fibonacci(n):
 
 | Operation | Array | Linked List | Hash Table | Binary Search Tree |
 |-----------|-------|-------------|------------|--------------------|
-| Access by index | O(1) ✅ | O(n) ❌ | N/A | N/A |
+| Access by index | O(1) ✅* | O(n) ❌ | N/A | N/A |
 | Search | O(n) | O(n) | O(1) ✅ | O(log n) |
-| Insert at end | O(1) ✅ | O(1) ✅ | O(1) ✅ | O(log n) |
-| Insert at beginning | O(n) | O(1) ✅ | O(1) ✅ | O(log n) |
+| Insert at end | O(1)† ✅ | O(1) ✅ | O(1) ✅ | O(log n) |
+| Insert at beginning | O(n)‡ | O(1) ✅ | O(1) ✅ | O(log n) |
 | Delete | O(n) | O(1) ✅ | O(1) ✅ | O(log n) |
 | Ordered traversal | O(n) ✅ | O(n) ✅ | N/A | O(n) ✅ |
+
+*Assumes contiguous memory (most implementations)  
+†O(1) amortized - may resize occasionally  
+‡Requires shifting all elements in dynamic arrays
 
 ### Example: Frequent Lookups
 
