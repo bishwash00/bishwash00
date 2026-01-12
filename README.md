@@ -1,5 +1,9 @@
 ## Hi there 👋
 I'm Bishwash Karki currently studying CS and learning new skills.
+
+## 📚 Resources
+
+- [**Performance Optimization Guide**](./PERFORMANCE_OPTIMIZATION_GUIDE.md) - A comprehensive guide to identifying and fixing slow or inefficient code
 <!--
 **bishwash00/bishwash00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
